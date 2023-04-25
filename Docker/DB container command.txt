@@ -1,0 +1,22 @@
+docker run --name postgres-db -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+
+
+Applying migration '20230422211245_InitialCreateCustomers'.
+Applying migration '20230422211529_InitialCreateTablesAll'.
+Applying migration '20230422211657_InitialCreateTablesAllPKsUpdate'.
+Applying migration '20230422214408_InitialCreateTablesAllPKsUpdateWithSeedDataCustomers'.
+Applying migration '20230422221217_InitialCreateTablesAllPKsUpdateWithSeedDataAllTables
+
+
+Remove-Migration "20230422211245_InitialCreateCustomers" -Force
+
+Remove-Migration "20230422211529_InitialCreateTablesAll" -Force
+
+
+Remove-Migration "20230422211657_InitialCreateTablesAllPKsUpdate" -Force
+
+Remove-Migration "20230422214408_InitialCreateTablesAllPKsUpdateWithSeedDataCustomers" -Force
+
+
+Remove-Migration "20230422221217_InitialCreateTablesAllPKsUpdateWithSeedDataAllTables" -Force
